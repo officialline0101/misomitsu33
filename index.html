@@ -1179,53 +1179,53 @@
                         return acc;
                     }, 0);
 
-                    // 営業日のイベント時間内に他のイベントがある場合
-                    if (isBusinessEventTime && count > 0) {
-                        cell.textContent = '✕';
-                        cell.classList.add('unavailable');
-                    }
-                    // 営業日のイベント時間（他のイベントがない場合）
-                    else if (isBusinessEventTime) {
-                        cell.textContent = '◯';
-                        cell.classList.add('available');
-                    }
-                    // 営業日で、指定されている時間以外の時間は×
-                    else if (businessEventTimes.length > 0) {
-                        cell.textContent = '✕';
-                        cell.classList.add('unavailable');
-                    }
-                    // 水曜日の10:00～10:30、全曜日の16:30～18:00を✕にする
-                    if (
-                        (slotStart.getDay() === 5 && // 水曜日
-                            slotStart.getHours() === 10 && slotStart.getMinutes() < 30) // 10:00～10:30
-                        ||
-                        (slotStart.getHours() === 16 && slotStart.getMinutes() >= 30) // 16:30～
-                        ||
-                        (slotStart.getHours() >= 17 && slotStart.getHours() < 19) // 17:00～18:00
-                    ) {
-                        cell.textContent = '✕';
-                        cell.classList.add('unavailable', 'black-x');
-                    }
-                    // 火曜日で、営業日ではない場合
-                    else if (slotStart.getDay() === 2 && !isBusinessDay && businessEventTimes.length === 0) {
-                        cell.textContent = '✕';
-                        cell.classList.add('unavailable');
-                    }
-                    // 営業日でかつ他のイベントがない場合
-                    else if (isBusinessDay && count === 0) {
-                        cell.textContent = '◯';
-                        cell.classList.add('available');
-                    }
-                    // それ以外の条件
-                    else if (count <= 0) {
-                        cell.textContent = '◯';
-                        cell.classList.add('available');
-                    } else {
-                        cell.textContent = '✕';
-                        cell.classList.add('unavailable');
-                    }
+// 営業日のイベント時間内に他のイベントがある場合
+if (isBusinessEventTime && count > 0) {
+    cell.textContent = '✕';
+    cell.classList.add('unavailable');
+}
+// 営業日のイベント時間（他のイベントがない場合）
+else if (isBusinessEventTime) {
+    cell.textContent = '◯';
+    cell.classList.add('available');
+}
+// 営業日で、指定されている時間以外の時間は×
+else if (businessEventTimes.length > 0) {
+    cell.textContent = '✕';
+    cell.classList.add('unavailable');
+}
+// 営業日でかつ他のイベントがない場合
+else if (isBusinessDay && count === 0) {
+    cell.textContent = '◯';
+    cell.classList.add('available');
+}
+// 水曜日の10:00～10:30、全曜日の16:30～18:00を✕にする
+else if (
+    (slotStart.getDay() === 5 && // 水曜日
+        slotStart.getHours() === 10 && slotStart.getMinutes() < 30) // 10:00～10:30
+    ||
+    (slotStart.getHours() === 16 && slotStart.getMinutes() >= 30) // 16:30～
+    ||
+    (slotStart.getHours() >= 17 && slotStart.getHours() < 19) // 17:00～18:00
+) {
+    cell.textContent = '✕';
+    cell.classList.add('unavailable', 'black-x');
+}
+// 火曜日で、営業日ではない場合
+else if (slotStart.getDay() === 2 && !isBusinessDay && businessEventTimes.length === 0) {
+    cell.textContent = '✕';
+    cell.classList.add('unavailable');
+}
+// それ以外の条件
+else if (count <= 0) {
+    cell.textContent = '◯';
+    cell.classList.add('available');
+} else {
+    cell.textContent = '✕';
+    cell.classList.add('unavailable');
+}
 
-                    cell.setAttribute('data-date', slotStart.toISOString());
+cell.setAttribute('data-date', slotStart.toISOString());
                 }
             }
         }
