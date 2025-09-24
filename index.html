@@ -1153,12 +1153,12 @@
                         continue;
                     }
 
-// 48時間後の時刻を計算
-const nowPlus48Hours = new Date(now.getTime() + 48 * 60 * 60 * 1000);
+// 24時間後の時刻を計算
+const nowPlus24Hours = new Date(now.getTime() + 24 * 60 * 60 * 1000);
 
 // ここで終了時間を使った条件処理を行う
 // 例えば、リアルタイムで既に過ぎた時間帯は×にする
-if (slotStart < nowPlus48Hours) {
+if (slotStart < nowPlus24Hours) {
     cell.textContent = '✕';
     cell.classList.add('unavailable');
     continue;
