@@ -463,76 +463,120 @@
 
         <div id="treatment-text" style="display: none; margin-bottom: 10px;"></div>
 
+        <!-- ① おがくず酵素風呂 -->
         <div id="male" class="menu-section">
             <div class="highlight-background">
                 <span class="highlight-text">◆おがくず酵素風呂◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="15000">おかくず酵素風呂温浴</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment2')" data-price="15000">おかくず酵素風呂ペア温浴</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment3')" data-price="15000">貸し切りおかくず酵素風呂温浴</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="15000">おがくず酵素風呂温浴</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment2')" data-price="15000">おがくず酵素風呂ペア温浴</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment3')" data-price="15000">貸し切りおがくず酵素風呂温浴</button>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
             </div>
-            <div class="irradiations">
-                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">【オプション】メディカルチネイザン</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">【オプション】オイルリンパマッサージ</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">【オプション】ヨガ</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">【オプション】TRXサスペンショントレーニング</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">【オプション】WINBACK施術</button>
-            </div>
+<div class="irradiations">
+  <!-- ① -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="30">【オプション】WINBACK施術（部位別30分）</button>
+  <!-- ② -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="60">【オプション】WINBACK施術（全身60分）</button>
+  <!-- ③ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="60">【オプション】メディカルチネイザン（60分）</button>
+  <!-- ④ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="60">【オプション】全身オイルリンパマッサージ（60分）</button>
+  <!-- ⑤ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="75">【オプション】全身オイルリンパ×チネイザン（75分）</button>
+  <!-- ⑥（表示20分／システム30分） -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="30">【オプション】貼るだけWINBACK施術（部位別20分）</button>
+  <!-- ⑦ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="10">【オプション】ヘッドマッサージ（10分）</button>
+  <!-- ⑧ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="60">【オプション】ヨガ（60分）</button>
+  <!-- ⑨ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="50">【オプション】TRXサスペンショントレーニング（50分）</button>
+  <!-- ⑩（表示60分／システム90分） -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="90">【オプション】WINBACK×TRXセットコース（60分）</button>
+</div>
         </div>
 
+        <!-- ② マッサージ -->
         <div id="female" class="menu-section">
             <div class="highlight-background">
                 <span class="highlight-text">◆マッサージ◆</span>
             </div>
+            <!-- 既存メニュー（変更無し） -->
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment5')" data-price="15000">メディカルチネイザン</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-price="15000">オイルリンパマッサージ</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment7')" data-price="15000">WINBACK施術</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment5')" data-price="15000">WINBACK施術（部位別30分）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-price="15000">WINBACK施術（全身60分）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment7')" data-price="15000">メディカルチネイザン（60分）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment5')" data-price="15000">全身オイルリンパマッサージ（60分）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-price="15000">全身オイルリンパ×チネイザン（75分）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment7')" data-price="15000">貼るだけWINBACK施術（部位別20分）</button>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
             </div>
-            <div class="irradiations">
-                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">【オプション】おがくず酵素風呂</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">【オプション】ヨガ</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">【オプション】TRXサスペンショントレーニング</button>
-            </div>
+<div class="irradiations">
+  <!-- ① -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="60">【オプション】おがくず酵素風呂（60分）</button>
+  <!-- ② -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="10">【オプション】ヘッドマッサージ（10分）</button>
+  <!-- ③ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="60">【オプション】ヨガ（60分）</button>
+  <!-- ④ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="50">【オプション】TRXサスペンショントレーニング（50分）</button>
+  <!-- ⑤（表示20分／システム20分） -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="20">【オプション】貼るだけWINBACK施術（部位別20分）</button>
+</div>
+
         </div>
 
+        <!-- ③ フィットネス -->
         <div id="fitness" class="menu-section">
             <div class="highlight-background">
                 <span class="highlight-text">◆フィットネス◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">ヨガ</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">TRXサスペンショントレーニング</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000" data-duration="70">ヨガ（60分）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000" data-duration="50">TRXサスペンショントレーニング（50分）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000" data-duration="90">WINBACK×TRXセットコース（60分）</button>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
             </div>
-            <div class="irradiations">
-                <button type="button" id="firstirradiations" onclick="selectirradiations(this)" data-price="15000">【オプション】おがくず酵素風呂</button>
-                <button type="button" id="repeatirradiations" onclick="selectirradiations(this)" data-price="15000">【オプション】メディカルチネイザン</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">【オプション】オイルリンパマッサージ</button>
-                <button type="button" id="sanirradiations" onclick="selectirradiations(this)" data-price="15000">【オプション】WINBACK施術</button>
-            </div>
+<div class="irradiations">
+  <!-- ① -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="60">【オプション】おがくず酵素風呂（60分）</button>
+  <!-- ② -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="30">【オプション】WINBACK施術（部位別30分）</button>
+  <!-- ③ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="60">【オプション】WINBACK施術（全身60分）</button>
+  <!-- ④ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="60">【オプション】メディカルチネイザン（60分）</button>
+  <!-- ⑤ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="60">【オプション】全身オイルリンパマッサージ（60分）</button>
+  <!-- ⑥ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="75">【オプション】全身オイルリンパ×チネイザン（75分）</button>
+  <!-- ⑦（表示20分／システム30分） -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="30">【オプション】貼るだけWINBACK施術（部位別20分）</button>
+  <!-- ⑧ -->
+  <button type="button" onclick="selectirradiations(this)" data-price="15000" data-duration="10">【オプション】ヘッドマッサージ（10分）</button>
+</div>
         </div>
 
+        <!-- 人気メニューセット（変更なし） -->
         <div id="Popularity" class="menu-section">
             <div class="highlight-background">
                 <span class="highlight-text">◆人気メニューセット◆</span>
             </div>
             <div class="symptoms">
                 <div class="info-text">※お一つのみご選択いただけます</div>
-                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">おかくず酵素風呂温浴<br>＋<br>メディカルチネイザン</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">おかくず酵素風呂温浴<br>＋<br>オイルリンパマッサージ</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">おかくず酵素風呂温浴<br>＋<br>WINBACK施術</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">おかくず酵素風呂温浴<br>＋<br>ヨガ</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">おかくず酵素風呂温浴<br>＋<br>TRXサスペンショントレーニング</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">おがくず酵素風呂温浴<br>＋<br>メディカルチネイザン</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">おがくず酵素風呂温浴<br>＋<br>オイルリンパマッサージ</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">おがくず酵素風呂温浴<br>＋<br>WINBACK施術</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">おがくず酵素風呂温浴<br>＋<br>ヨガ</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">おがくず酵素風呂温浴<br>＋<br>TRXサスペンショントレーニング</button>
             </div>
         </div>
 
@@ -616,33 +660,46 @@
 
         let selectedVisitTime = 0; // 訪問回数で選択された時間
 
-        // 訪問回数ごとの時間設定 (例：初めて=20分、2回目以降=15分)
-        let irradiationsTimes = {
-            '【オプション】メディカルチネイザン': 60,
-            '【オプション】オイルリンパマッサージ': 60,
-            '【オプション】ヨガ': 60,
-            '【オプション】TRXサスペンショントレーニング': 60,
-            '【オプション】WINBACK施術': 30,
-            '【オプション】おがくず酵素風呂': 60
-        };
+// オプション名ごとの所要時間（分）
+// ※同名でも画面側で data-duration を持つ場合は、data-duration を優先してください。
+let irradiationsTimes = {
+  '【オプション】WINBACK施術（部位別30分）': 30,
+  '【オプション】WINBACK施術（全身60分）': 60,   // ←修正
+  '【オプション】メディカルチネイザン（60分）': 60,
+  '【オプション】全身オイルリンパマッサージ（60分）': 60,
+  '【オプション】全身オイルリンパ×チネイザン（75分）': 75, // ←修正
+  '【オプション】貼るだけWINBACK施術（部位別20分）': 30,    // グループによっては20。data-durationで上書き推奨
+  '【オプション】ヘッドマッサージ（10分）': 10,
+  '【オプション】ヨガ（60分）': 70,                          // ←修正
+  '【オプション】TRXサスペンショントレーニング（50分）': 50,
+  '【オプション】WINBACK×TRXセットコース（60分）': 90,
+  '【オプション】おがくず酵素風呂（60分）': 60
+};
 
         let selectedirradiationsTime = 0; // 訪問回数で選択された時間
 
-        let menuTimes = {
-            'おかくず酵素風呂温浴': 60,
-            'おかくず酵素風呂ペア温浴': 90,
-            '貸し切りおかくず酵素風呂温浴': 90,
-            'メディカルチネイザン': 70,
-            'オイルリンパマッサージ': 70,
-            'WINBACK施術': 30,
-            'ヨガ': 70,
-            'TRXサスペンショントレーニング': 70,
-            'おかくず酵素風呂温浴＋メディカルチネイザン': 120,
-            'おかくず酵素風呂温浴＋オイルリンパマッサージ': 120,
-            'おかくず酵素風呂温浴＋WINBACK施術': 120,
-            'おかくず酵素風呂温浴＋ヨガ': 120,
-            'おかくず酵素風呂温浴＋TRXサスペンショントレーニング': 120
-        };
+let menuTimes = {
+  'おがくず酵素風呂温浴': 60,
+  'おがくず酵素風呂ペア温浴': 90,
+  '貸し切りおがくず酵素風呂温浴': 90,
+  'メディカルチネイザン': 70,                       // ←修正
+  'オイルリンパマッサージ': 70,
+  'WINBACK施術（部位別30分）': 30,
+  'WINBACK施術（全身60分）': 90,
+  'メディカルチネイザン（60分）': 70,               // ←修正
+  '全身オイルリンパマッサージ（60分）': 70,         // ←修正
+  '全身オイルリンパ×チネイザン（75分）': 90,
+  '貼るだけWINBACK施術（部位別20分）': 30,
+  'WINBACK施術': 30,
+  'ヨガ': 70,                                         // ←修正（フィットネスの新表記に合わせる）
+  'TRXサスペンショントレーニング': 50,
+  'WINBACK×TRXセットコース（60分）': 90,
+  'おがくず酵素風呂温浴＋メディカルチネイザン': 120,
+  'おがくず酵素風呂温浴＋オイルリンパマッサージ': 120,
+  'おがくず酵素風呂温浴＋WINBACK施術': 120,
+  'おがくず酵素風呂温浴＋ヨガ': 120,
+  'おがくず酵素風呂温浴＋TRXサスペンショントレーニング': 120
+};
 
         let selectedMenuTime = 0;
 
@@ -771,35 +828,39 @@
             });
         });
 
-        function selectSymptom(button, treatmentId) {
-            // 選択された日時をリセット
-            selectedFullDate = '';
+function selectSymptom(button, treatmentId) {
+    // 選択された日時をリセット
+    selectedFullDate = '';
 
-            // ボタンの選択状態を切り替える
-            button.classList.toggle('active');
+    // ボタンの選択状態を切り替える
+    button.classList.toggle('active');
 
-            // 選択されたオプションを取得
-            const updatedSelectedButtons = document.querySelectorAll('.symptoms button.active');
+    // 選択されたオプションを取得
+    const updatedSelectedButtons = document.querySelectorAll('.symptoms button.active');
 
-            // メニュー時間と価格をリセット
-            selectedMenuTime = 0;
-            selectedSymptom = [];
-            menuPrice = 0;
+    // メニュー時間と価格をリセット
+    selectedMenuTime = 0;
+    selectedSymptom = [];
+    menuPrice = 0;
 
-            if (updatedSelectedButtons.length === 0) {
-                // すべてのボタンの選択が解除された場合
-                selectedMenuTime = 0;
-                selectedSymptom = null; // 選択されたメニューをリセット
-                menuPrice = 0; // メニュー価格をリセット
-            } else {
-                // 選択された各ボタンについて処理
-                updatedSelectedButtons.forEach((btn) => {
-                    const selectedMenu = btn.textContent;
-                    selectedMenuTime += menuTimes[selectedMenu] || 0; // 各メニューの時間を合計
-                    selectedSymptom.push(selectedMenu); // 選択されたメニューを配列に追加
-                    menuPrice += parseInt(btn.getAttribute('data-price'), 10) || 0; // 各メニューの価格を合計
-                });
-            }
+    if (updatedSelectedButtons.length === 0) {
+        // すべてのボタンの選択が解除された場合
+        selectedMenuTime = 0;
+        selectedSymptom = [];
+        menuPrice = 0;
+    } else {
+        // 選択された各ボタンについて処理
+        updatedSelectedButtons.forEach((btn) => {
+            const selectedMenuName = btn.textContent.trim();
+
+            // data-duration があればそれを優先し、なければ menuTimes を参照
+            const duration = parseInt(btn.dataset.duration || menuTimes[selectedMenuName] || 0);
+            selectedMenuTime += duration;
+
+            selectedSymptom.push(selectedMenuName);
+            menuPrice += parseInt(btn.dataset.price || 0);
+        });
+    }
 
             console.log('選択されたメニューの時間:', selectedMenuTime);
 
