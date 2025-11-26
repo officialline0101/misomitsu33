@@ -469,9 +469,9 @@
                 <span class="highlight-text">◆おがくず酵素風呂◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment1')" data-price="15000">おがくず酵素風呂温浴</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment2')" data-price="15000">おがくず酵素風呂ペア温浴</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment3')" data-price="15000">貸し切りおがくず酵素風呂温浴</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment')" data-price="15000">おがくず酵素風呂温浴</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment')" data-price="15000">おがくず酵素風呂ペア温浴</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment')" data-price="15000">貸し切りおがくず酵素風呂温浴</button>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
@@ -507,12 +507,13 @@
             </div>
             <!-- 既存メニュー（変更無し） -->
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment5')" data-price="15000">WINBACK施術（部位別30分）</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-price="15000">WINBACK施術（全身60分）</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment7')" data-price="15000">メディカルチネイザン（60分）</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment5')" data-price="15000">全身オイルリンパマッサージ（60分）</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-price="15000">全身オイルリンパ×チネイザン（75分）</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment7')" data-price="15000">貼るだけWINBACK施術（部位別20分）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment')" data-price="15000">WINBACK施術（部位別30分）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment')" data-price="15000">WINBACK施術（全身60分）</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment6')" data-price="15000">WINBACKフェイシャル</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">メディカルチネイザン（60分）</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">全身オイルリンパマッサージ（60分）</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">全身オイルリンパ×チネイザン（75分）</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000">貼るだけWINBACK施術（部位別20分）</button>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
@@ -538,9 +539,9 @@
                 <span class="highlight-text">◆フィットネス◆</span>
             </div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000" data-duration="70">ヨガ（60分）</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000" data-duration="50">TRXサスペンショントレーニング（50分）</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000" data-duration="90">WINBACK×TRXセットコース（60分）</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000" data-duration="70">ヨガ（60分）</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000" data-duration="50">TRXサスペンショントレーニング（50分）</button>
+                <button type="button" onclick="selectSymptom(this)" data-price="15000" data-duration="90">WINBACK×TRXセットコース（60分）</button>
             </div>
             <div class="highlight-background">
                 <span class="highlight-text">オプション</span>
@@ -572,11 +573,9 @@
             </div>
             <div class="symptoms">
                 <div class="info-text">※お一つのみご選択いただけます</div>
-                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">おがくず酵素風呂温浴<br>＋<br>メディカルチネイザン</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">おがくず酵素風呂温浴<br>＋<br>オイルリンパマッサージ</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment8')" data-price="15000">おがくず酵素風呂温浴<br>＋<br>WINBACK施術</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">おがくず酵素風呂温浴<br>＋<br>ヨガ</button>
-                <button type="button" onclick="selectSymptom(this, 'treatment9')" data-price="15000">おがくず酵素風呂温浴<br>＋<br>TRXサスペンショントレーニング</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment14')" data-price="15000">体質回線LIGHTコース</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment15')" data-price="15000">体質改善BASICコース</button>
+                <button type="button" onclick="selectSymptom(this, 'treatment16')" data-price="15000">体質改善SPECIALコース</button>
             </div>
         </div>
 
@@ -679,6 +678,10 @@ let irradiationsTimes = {
         let selectedirradiationsTime = 0; // 訪問回数で選択された時間
 
 let menuTimes = {
+  '体質回線LIGHTコース': 85,
+  '体質改善BASICコース': 130,
+  '体質改善SPECIALコース': 190,
+  'WINBACKフェイシャル': 40,
   'おがくず酵素風呂温浴': 60,
   'おがくず酵素風呂ペア温浴': 90,
   '貸し切りおがくず酵素風呂温浴': 90,
@@ -723,9 +726,11 @@ let menuTimes = {
             const visitCountText = visitCount ? `・<span style="color:#ab83e6;"><strong>ご来店回数</strong></span>：${visitCount}` : '・来店回数が未選択です';
             const selectedMenuText = selectedMenu ? `・<span style="color:#ab83e6;"><strong>コース</strong></span>：${selectedMenu}` : '・コースが未選択です';
 
-            const selectedSymptomText = selectedSymptom.length > 0
-                ? `<span style="color:#ab83e6;"><strong>【メニュー】</strong></span><br>・${selectedSymptom.join('<br>・')}`
-                : '・メニューが未選択です';
+const selectedSymptomText = selectedSymptom.length > 0
+    ? `<span style="color:#ab83e6;"><strong>【メニュー】</strong></span><br>・${
+        selectedSymptom.map(item => item.name).join('<br>・')
+      }`
+    : '・メニューが未選択です';
 
             const irradiationsText = irradiationsCount
                 ? `<span style="color:#ab83e6;"><strong>【オプション】</strong></span><br>・${irradiationsCount.split(', ').join('<br>・')}`
@@ -828,79 +833,155 @@ let menuTimes = {
             });
         });
 
-function selectSymptom(button, treatmentId) {
-    // 選択された日時をリセット
-    selectedFullDate = '';
+        function selectSymptom(button, treatmentId) {
+            // 選択された日時をリセット
+            selectedFullDate = '';
 
-    // ボタンの選択状態を切り替える
-    button.classList.toggle('active');
+            const treatmentText = document.getElementById('treatment-text');
+            const selectedMenusDisplay = document.getElementById("selected-menus-display");
+            const selectedMenuNameDiv = document.getElementById('selected-menu-name');
 
-    // 選択されたオプションを取得
-    const updatedSelectedButtons = document.querySelectorAll('.symptoms button.active');
-
-    // メニュー時間と価格をリセット
-    selectedMenuTime = 0;
-    selectedSymptom = [];
-    menuPrice = 0;
-
-    if (updatedSelectedButtons.length === 0) {
-        // すべてのボタンの選択が解除された場合
-        selectedMenuTime = 0;
-        selectedSymptom = [];
-        menuPrice = 0;
-    } else {
-        // 選択された各ボタンについて処理
-        updatedSelectedButtons.forEach((btn) => {
-            const selectedMenuName = btn.textContent.trim();
-
-            // data-duration があればそれを優先し、なければ menuTimes を参照
-            const duration = parseInt(btn.dataset.duration || menuTimes[selectedMenuName] || 0);
-            selectedMenuTime += duration;
-
-            selectedSymptom.push(selectedMenuName);
-            menuPrice += parseInt(btn.dataset.price || 0);
-        });
-    }
-
-            console.log('選択されたメニューの時間:', selectedMenuTime);
-
-            // カレンダーを更新するために取得する日付を渡す
-            fetchAvailability(currentDate);
-
-            if (treatmentId === 'treatment1') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：90分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：6,500円<br>初診料：＋2,200円</strong></div>`;
-            } else if (treatmentId === 'treatment2') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：60分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：4,500円<br>初診料：＋2,200円</strong></div>`;
-            } else if (treatmentId === 'treatment3') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：120分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：8,700円<br>初診料：＋2,200円</strong></div>`;
-            } else if (treatmentId === 'treatment4') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：30分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円<br>初診料：＋2,200円</strong></div>`;
-            } else if (treatmentId === 'treatment5') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：60分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：6,500円</strong></div>`;
-            } else if (treatmentId === 'treatment6') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：30分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：4,500円</strong></div>`;
-            } else if (treatmentId === 'treatment7') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：90分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：8,700円</strong></div>`;
-            } else if (treatmentId === 'treatment8') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：15分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円</strong></div>`;
-            } else if (treatmentId === 'treatment9') {
-                treatmentText.innerHTML = `<div style="text-align: left;"><strong>所要時間：15分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円</strong></div>`;
+            // トグル
+            if (button.classList.contains('active')) {
+                button.classList.remove('active'); // ← 解除
             } else {
-                treatmentText.innerHTML = '';
+                const activeCount = document.querySelectorAll('.symptoms button.active').length;
+                if (activeCount >= 9) return;
+                button.classList.add('active');    // ← 選択
             }
 
-            // `treatment-text` を選択されたボタンの直後に移動
-            button.parentNode.insertBefore(treatmentText, button.nextSibling);
+            // 最新状態
+            const updatedSelectedButtons = document.querySelectorAll('.symptoms button.active');
 
-            // トリートメントテキストを表示
-            treatmentText.style.display = 'block';
+            // リセット
+            selectedMenuTime = 0;
+            selectedSymptom = [];
+            menuPrice = 0;
 
-            // 選択されたメニューの名前と価格を取得
-            const symptomName = button.textContent;  // ボタンのテキストを取得
-            selectedSymptom = [symptomName];  // 選択されたメニュー名を配列として保存
-            menuPrice = parseInt(button.getAttribute('data-price'), 10) || 0;  // メニューの価格を取得
+            // 0件ならすべて隠す
+            if (updatedSelectedButtons.length === 0) {
+                if (treatmentText) {
+                    treatmentText.style.display = 'none';
+                    treatmentText.innerHTML = '';
+                }
+                selectedMenusDisplay.style.display = 'none';
+                selectedMenusDisplay.innerHTML = '';
+                if (selectedMenuNameDiv) selectedMenuNameDiv.style.display = 'none';
+                return;
+            }
 
-            // 表示を更新
+            // 選択済みから再計算
+            updatedSelectedButtons.forEach((btn) => {
+                const selectedMenuName = btn.textContent;
+                const category = btn.getAttribute('data-category');
+                selectedSymptom.push({ category, name: selectedMenuName });
+                selectedMenuTime += menuTimes[selectedMenuName] || 0;
+                menuPrice += parseInt(btn.getAttribute('data-price'), 10) || 0;
+            });
+
+            // カレンダー更新
+            if (typeof fetchAvailability === 'function') {
+                fetchAvailability(currentDate);
+            }
+
+            // --- ここがポイント ---
+            // 解除クリックの場合（このボタンが非activeになった後）は詳細を表示しない
+            if (!button.classList.contains('active')) {
+                if (treatmentText) {
+                    treatmentText.style.display = 'none';
+                    treatmentText.innerHTML = '';
+                }
+            } else {
+                // 表示内容を treatmentId で分岐（未指定/不一致なら表示しない）
+                let html = '';
+                if (treatmentId === 'treatment1') {
+                    html = `<div style="text-align: left;"><strong>所要時間：90分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：6,500円<br>初診料：＋2,200円</strong></div>`;
+                } else if (treatmentId === 'treatment2') {
+                    html = `<div style="text-align: left;"><strong>所要時間：60分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：4,500円<br>初診料：＋2,200円</strong></div>`;
+                } else if (treatmentId === 'treatment3') {
+                    html = `<div style="text-align: left;"><strong>所要時間：120分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：8,700円<br>初診料：＋2,200円</strong></div>`;
+                } else if (treatmentId === 'treatment4') {
+                    html = `<div style="text-align: left;"><strong>所要時間：30分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円<br>初診料：＋2,200円</strong></div>`;
+                } else if (treatmentId === 'treatment5') {
+                    html = `<div style="text-align: left;"><strong>所要時間：60分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：6,500円</strong></div>`;
+                } else if (treatmentId === 'treatment6') {
+                    html = `<div style="text-align: left;">
+            <strong>所要時間：30分</strong><br>
+            高周波温熱で肌細胞を再起動！<br>肌のハリとリフト感が同時に高まります。<br>手から電気を流し施術ができるので、<br>ハンドならではの心地よさもしっかりと体感<br><br>-★こんな方におすすめ★-<br>・たるみシワが気になる<br>・小顔になりたい<br>・肌のトーンをあげたい
+        </div>
+        <div style="text-align: right;">
+            <strong>料金：9900円</strong>
+        </div>`;
+                } else if (treatmentId === 'treatment7') {
+                    html = `<div style="text-align: left;"><strong>所要時間：90分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：8,700円</strong></div>`;
+                } else if (treatmentId === 'treatment8') {
+                    html = `<div style="text-align: left;"><strong>所要時間：15分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円</strong></div>`;
+                } else if (treatmentId === 'treatment9') {
+                    html = `<div style="text-align: left;"><strong>所要時間：15分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円</strong></div>`;
+                } else if (treatmentId === 'treatment10') {
+                    html = `<div style="text-align: left;"><strong>所要時間：60分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：6,500円</strong></div>`;
+                } else if (treatmentId === 'treatment11') {
+                    html = `<div style="text-align: left;"><strong>所要時間：30分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：4,500円</strong></div>`;
+                } else if (treatmentId === 'treatment12') {
+                    html = `<div style="text-align: left;"><strong>所要時間：90分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：8,700円</strong></div>`;
+                } else if (treatmentId === 'treatment13') {
+                    html = `<div style="text-align: left;"><strong>所要時間：15分</strong><br>※症状によりお時間が前後する場合がございます</div><div style="text-align: right;"><strong>料金：1,700円</strong></div>`;
+                } else if (treatmentId === 'treatment14') {
+                    html = `<div style="text-align: left;">
+            <strong>所要時間：75分</strong><br>
+多忙な方におすすめのコースです。 <br>短時間でサクッと臓活・温活☆ <br>EMSで寝てるだけで筋トレも出来ちゃいます<br><br>-コース内容- <br>・貼るだけWINBACK <br>・酵素風呂
+        </div>
+        <div style="text-align: right;">
+            <strong>料金：8300円<br>
+            ×専用シート購入が必要<br>（3500円/約10回使用可能）</strong>
+        </div>`;
+                } else if (treatmentId === 'treatment15') {
+                    html = `<div style="text-align: left;">
+            <strong>所要時間：120分</strong><br>
+            温める×流す<br>相性抜群なセットメニューです。<br>同日に行うことで<br>血流&リンパの流れが活性化！<br>全身が巡りスムーズに毒素排出<br><br>-コース内容-<br>・全身オイルリンパ<br>・チネイザン<br>・酵素風呂
+        </div>
+        <div style="text-align: right;">
+            <strong>料金：14800円</strong>
+        </div>`;
+                } else if (treatmentId === 'treatment16') {
+                    html = `<div style="text-align: left;">
+            <strong>所要時間：180分</strong><br>
+            みそみつでしか体験できない！？<br>本気で体質改善されたい方向けのメニューです。<br>温活×巡活×臓活<br>スペシャルなデトックスを体感<br><br>-コース内容-<br>・部位別WINBACK<br>・全身オイルリンパ<br>・チネイザン <br>・酵素風呂
+        </div>
+        <div style="text-align: right;">
+            <strong>料金：24800円</strong>
+        </div>`;
+                }
+
+                // 内容が用意できた時だけ移動＆表示
+                if (html) {
+                    treatmentText.innerHTML = html;
+                    button.parentNode.insertBefore(treatmentText, button.nextSibling);
+                    treatmentText.style.display = 'block';
+                } else {
+                    treatmentText.innerHTML = '';
+                    treatmentText.style.display = 'none';
+                }
+            }
+
+            // 選択リストの描画
+            if (selectedSymptom.length > 0) {
+                selectedMenusDisplay.innerHTML = `
+            <div class="menu-items-wrapper">
+                ${selectedSymptom.map(item => `
+                    <div class="menu-item">
+                        <span>《${item.category}》<br>${item.name}</span>
+                        <button class="remove-button" data-category="${item.category}" data-name="${item.name}" onclick="removeSymptom(this)">✕</button>
+                    </div>
+                `).join('')}
+            </div>
+        `;
+                selectedMenusDisplay.style.display = 'block';
+            } else {
+                selectedMenusDisplay.innerHTML = '';
+                selectedMenusDisplay.style.display = 'none';
+            }
+
             updateDisplayInfo();
         }
 
@@ -1065,10 +1146,18 @@ function selectSymptom(button, treatmentId) {
                 return;
             }
 
+            // selectedSymptomを文字列に整形
+            const selectedSymptomText = formData.selectedSymptom
+                ? formData.selectedSymptom.map(item => `${item.name}`).join(',')
+                : 'メニュー未選択';
+
+            // irradiationsCountの整形（nullチェック）
+            const irradiationsText = formData.irradiationsCount || '';
+
             // LINEトークにメッセージを送信
             liff.sendMessages([{
                 type: 'text',
-                text: `【予約フォーム】\nお名前：${formData.name}\n電話番号：${formData.phone}\nご来店回数：${formData.visitCount}\nコース：${formData.selectedMenu}\nメニュー：${formData.selectedSymptom},${formData.irradiationsCount}\n希望日時：\n ${formData.dates[0]}\nメッセージ：${formData.message}`
+                text: `【予約フォーム】\nお名前：${formData.name}\n電話番号：${formData.phone}\nご来店回数：${formData.visitCount}\nコース：${formData.selectedMenu}\nメニュー：${selectedSymptomText},${irradiationsText}\n希望日時：\n ${formData.dates[0]}\nメッセージ：${formData.message}`
             }]).then(() => {
                 /* メッセージ送信成功時の処理 */
                 alert('当日キャンセルは無いようにお願いいたします。');
