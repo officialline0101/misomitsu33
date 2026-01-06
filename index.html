@@ -1556,30 +1556,30 @@ function updateCalendar(availability, businessDays) {
                         // 次の予約開始時間から所要時間を引いて、その時間が空いているか確認する
                         // 例: 15:50予約あり、所要時間60分 → 14:50開始なら入るか？
                         
-                        // 競合しているイベントの中で「最も早い開始時間」を見つける
-                        let minConflictStart = new Date(8640000000000000); // 遠い未来
-                        conflictingEvents.forEach(e => {
-                            const eStart = new Date(e.startTime);
-                            if (eStart < minConflictStart) minConflictStart = eStart;
-                        });
+// 競合しているイベントの中で「最も早い開始時間」を見つける
+let minConflictStart = new Date(8640000000000000);
+conflictingEvents.forEach(e => {
+    const eStart = new Date(e.startTime);
+    if (eStart < minConflictStart) minConflictStart = eStart;
+});
 
 // 逆算した開始時間
 const backwardStart = new Date(minConflictStart.getTime() - duration * 60000);
 const backwardEnd = minConflictStart;
 
-// ▼▼▼ 追加修正ここから ▼▼▼
-// 計算した開始時間が「00分」または「30分」の場合、
-// その時間のセルは手前に存在しており、そこで予約できるため、ここでは表示しない（重複防止）
+// 前回追加した重複防止ロジック
 const bm = backwardStart.getMinutes();
 if (backwardStart < slotStart && (bm === 0 || bm === 30)) {
-    // 何もしない（validOptionFound = false のまま）
+    // 何もしない（00分、30分ジャストなら既存枠で表示されるため）
 } else {
-// ▲▲▲ 追加修正ここまで（elseで既存の判定を囲む）▲▲▲
-
     // 逆算した時間が、現在のスロット時間より極端に前でないか確認
     const previousSlotLimit = new Date(slotStart.getTime() - 30 * 60000);
 
-    if (backwardStart >= nowPlus24Hours && backwardStart >= previousSlotLimit) {
+    // ▼▼▼ 条件追加：10時以降であること（.getHours() >= 10）を追加 ▼▼▼
+    if (backwardStart >= nowPlus24Hours && 
+        backwardStart >= previousSlotLimit && 
+        backwardStart.getHours() >= 10) { // ← ここに「10時より前はダメ」を追加
+        
         // この「逆算した時間」が他の予約と被っていないか再チェック
         const doubleConflictBackward = dayEvents.some(event => {
             const eStart = new Date(event.startTime);
@@ -1607,7 +1607,7 @@ if (backwardStart < slotStart && (bm === 0 || bm === 30)) {
             validOptionFound = true;
         }
     }
-} // ← 追加したelseの閉じカッコを忘れないように注意
+}
 
                         // --- 既存ロジック：後ろ倒し（Adjusted Start）計算 ---
                         // 前倒しが見つからなかった場合、または前倒しよりも「後ろ倒し」の方がスロット時間に近い場合はこちらを採用しても良いが
