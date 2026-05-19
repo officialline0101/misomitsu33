@@ -2106,9 +2106,11 @@
             const hasShiftEvent = overlappingEvents.some(isShiftEvent);
 
             if (hasShiftEvent) {
-                // 出勤イベントあり → 酵素風呂スタッフ2名体制：酵素風呂が2件以上で×
-                if (kosoEvents.length >= 2) return kosoEvents;
-                // 酵素風呂が1件以下（0件含む）なら空き扱い
+                // 出勤イベントあり → スタッフ2名体制：酵素風呂・通常予約とも1枠消費。
+                // 非出勤イベント（酵素風呂＋通常予約）の合計が2件以上重なれば×。
+                const occupyingEvents = overlappingEvents.filter(event => !isShiftEvent(event));
+                if (occupyingEvents.length >= 2) return occupyingEvents;
+                // 1件以下（0件含む）なら空き扱い
                 return [];
             } else {
                 // 出勤イベントなし → 通常1枠：酵素風呂が1件でも重なれば×
